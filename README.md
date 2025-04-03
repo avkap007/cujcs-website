@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# 🧠 CUJCS Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official website repo for the **Canadian Undergraduate Journal of Cognitive Science** — built with ❤️ by students, for students.
 
-Currently, two official plugins are available:
+---
+
+## 🔧 Tech Stack
+
+- [Vite](https://vitejs.dev/) + [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [React Router](https://reactrouter.com/) for page routing
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v20+
+- npm v10+
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Dev Server
+
+```bash
+npm run dev
+```
+
+Then go to http://localhost:5173.
+
+---
+
+## 🗂 Folder Structure
+
+```
+src/
+│
+├── components/       # Navbar, Footer, Layout, etc.
+├── pages/           # Individual routes: Home, About, Submissions, etc.
+├── constants/       # Static data like team, issues, etc.
+├── assets/          # Images, logos, etc.
+├── index.css        # Tailwind directives
+└── main.tsx         # App entry
+```
+
+## 🧠 Current Pages
+
+- `/` — Home
+- `/about`
+- `/editions`
+- `/submissions`
+- `/art`
+- `/contact`
+
+---
+
+## 🔍 Development Notes
+
+This project uses Vite with React and TypeScript. The following plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+For production applications, we recommend updating the ESLint configuration to enable type-aware lint rules. See the [Vite documentation](https://vitejs.dev/guide/) for more details.
