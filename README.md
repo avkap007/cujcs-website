@@ -40,13 +40,20 @@ Then go to http://localhost:5173.
 ```
 src/
 │
-├── components/       # Navbar, Footer, Layout, etc.
-├── pages/           # Individual routes: Home, About, Submissions, etc.
-├── constants/       # Static data like team, issues, etc.
-├── assets/          # Images, logos, etc.
-├── index.css        # Tailwind directives
-└── main.tsx         # App entry
+├── components/       # Reusable UI components (Navbar, Footer, Layout, Dropdown, etc.)
+├── pages/            # Individual routes/pages (Home, About, Submissions, Editions, Art, Contact, etc.)
+├── data/             # JSON files for dynamic content (e.g., editions.json, team.json)
+├── assets/           # Images, logos, and other static assets
+├── index.css         # Tailwind and global CSS
+└── main.tsx          # App entry point
 ```
+
+- **components/**: All reusable UI building blocks. Import these into pages or layouts as needed.
+- **pages/**: Each file is a route/page. Add new pages here for new routes.
+- **data/**: Store editable JSON files for dynamic content (e.g., team members, editions, etc.). Import these into components/pages as needed.
+- **assets/**: Store images, logos, and other static files here. Reference them in your components/pages.
+- **index.css**: Tailwind directives and global styles. Do not add max-width or margin constraints here unless you want them everywhere.
+- **main.tsx**: App entry point. Handles rendering and bootstrapping.
 
 ## 🧠 Current Pages
 
@@ -59,19 +66,19 @@ src/
 
 ---
 
-## 🔍 Development Notes
+## 🧩 How to Add or Edit Content
 
-This project uses Vite with React and TypeScript. The following plugins are available:
+- **Add/Edit a Page:** Create or edit a file in `src/pages/`. Each file is a route.
+- **Add/Edit a Component:** Create or edit a file in `src/components/`. Import into pages/layouts as needed.
+- **Add/Edit Data:** Place JSON files in `src/data/` and import them into your components/pages for dynamic content.
+- **Add/Edit Images:** Place images in `src/assets/` or `public/` and reference them in your code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-For production applications, we recommend updating the ESLint configuration to enable type-aware lint rules. See the [Vite documentation](https://vitejs.dev/guide/) for more details.
+## 🎨 Design Reference
+See attached screenshots or Figma for the current design.
 
-## Design Reference
-See attached screenshots for the current design.
-
-## Color Palette
+## 🎨 Color Palette
 - **Bright Orange:** #F57C00
 - **Light Peach:** #FAC090
 - **Deep Red:** #A70039
@@ -79,21 +86,20 @@ See attached screenshots for the current design.
 - **White:** #FFFFFF
 - **Muted Purple-Gray:** #D7C1C8
 
-## Font
+## 🅰️ Font
 - **IBM Plex Sans** (imported from Google Fonts)
-
-## Tasks & Components
-- **Navbar**: UI and navigation (see design)
-- **Homepage**: Content and layout (see design)
-- **Contact Us**: UI and navigation
-- **About Us**: Content and layout
-- **Footer**: UI and navigation (see design)
-
-## Contribution
-- Each component/page is in `src/components` or `src/pages`.
-- Use the color palette and font as specified above.
-- Refer to the design screenshot for layout and spacing.
 
 ---
 
-For any questions, contact the project lead.
+## 🛠️ Contribution Guidelines
+- Each component/page is in `src/components` or `src/pages`.
+- Use the color palette and font as specified above.
+- Refer to the design screenshot or Figma for layout and spacing.
+- Keep all global styles in `index.css` and use Tailwind for layout and spacing.
+- Do not add max-width or margin constraints in global CSS unless you want them everywhere.
+- Use `w-full` and centering utilities in your components for layout control.
+- For dynamic content, use JSON files in `src/data/` and import them as needed.
+
+---
+
+For any questions, contact the project lead or open an issue on GitHub.
