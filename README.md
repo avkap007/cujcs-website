@@ -67,3 +67,33 @@ This project uses Vite with React and TypeScript. The following plugins are avai
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 For production applications, we recommend updating the ESLint configuration to enable type-aware lint rules. See the [Vite documentation](https://vitejs.dev/guide/) for more details.
+
+## Design Reference
+See attached screenshots for the current design.
+
+## Color Palette
+- **Bright Orange:** #F57C00
+- **Light Peach:** #FAC090
+- **Deep Red:** #A70039
+- **Pink:** #F06292
+- **White:** #FFFFFF
+- **Muted Purple-Gray:** #D7C1C8
+
+## Font
+- **IBM Plex Sans** (imported from Google Fonts)
+
+## Tasks & Components
+- **Navbar**: UI and navigation (see design)
+- **Homepage**: Content and layout (see design)
+- **Contact Us**: UI and navigation
+- **About Us**: Content and layout
+- **Footer**: UI and navigation (see design)
+
+## Contribution
+- Each component/page is in `src/components` or `src/pages`.
+- Use the color palette and font as specified above.
+- Refer to the design screenshot for layout and spacing.
+
+---
+
+For any questions, contact the project lead.
