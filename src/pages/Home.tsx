@@ -1,3 +1,5 @@
+import AboutSection from "../components/AboutSection";
+
 export default function Home() {
   return (
     <section
@@ -21,7 +23,10 @@ export default function Home() {
           <p className="mt-8 text-gray-600 text-sm">
             Edit <code>src/pages/Home.tsx</code> to get started.
           </p>
-        </div>
+        </div>        
+      </div>
+      <div>
+        <AboutSection />
       </div>
     </section>
   );
