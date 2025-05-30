@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=pp-mori@400,500,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* === Root Variables (optional — can be cleaned further later) === */
+/* === Root Variables === */
 :root {
   font-family: 'IBM Plex Sans', sans-serif;
   line-height: 1.5;
@@ -34,10 +35,26 @@ body {
   height: 100%;
 }
 
-/* === Typography === */
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* === Typography Styles === */
+@layer base {
+  h1 {
+    @apply text-h1 font-mori font-semibold tracking-[-0.03em];
+  }
+  h2 {
+    @apply text-h2 font-mori;
+  }
+  h3 {
+    @apply text-h3 font-mori font-semibold;
+  }
+  h4 {
+    @apply text-h4 font-ibm font-bold uppercase;
+  }
+  p {
+    @apply text-body font-mori;
+  }
+  a {
+    @apply text-body font-ibm italic underline;
+  }
 }
 
 /* === Links === */
@@ -71,7 +88,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* === Optional: Light mode override if you support dark mode switching === */
+/* === Light mode override === */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
