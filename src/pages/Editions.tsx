@@ -124,11 +124,13 @@ const EditionsPage: React.FC = () => {
       
       {/* Header */}
       <div className="relative pt-24 pb-12 px-8">
-        <h1 className="text-5xl font-bold text-gray-900">ALL COLLECTIVES</h1>
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900">ALL COLLECTIVES</h1>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="relative px-8 pb-12">
+      <div className="relative px-8 pb-12 max-w-7xl mx-auto">
         {/* Journals Section */}
         <section className="mb-8">
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
@@ -219,27 +221,26 @@ const EditionsPage: React.FC = () => {
             Every issue of the journal features captivating art submitted by students. These works explore themes of cognition, consciousness, and the human mind through visual expression.
           </p>
 
-          {/* Masonry Grid */}
+          {/* Masonry Grid - Now constrained to max width */}
           <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
-  {artworks.map((artwork) => (
-    <div
-      key={artwork.id}
-      className="mb-4 break-inside-avoid cursor-pointer transition-transform duration-200 transform hover:scale-105"
-      onClick={() => setSelectedArtwork(artwork)}
-    >
-      <img
-        src={artwork.imageUrl}
-        alt={artwork.title}
-        className="w-full rounded-lg shadow-md object-cover"
-      />
-      <div className="mt-2">
-        <p className="font-semibold text-gray-800">{artwork.title}</p>
-        <p className="text-sm text-gray-600 italic">{artwork.artist}</p>
-      </div>
-    </div>
-  ))}
-</div>
-
+            {artworks.map((artwork) => (
+              <div
+                key={artwork.id}
+                className="mb-4 break-inside-avoid cursor-pointer transition-transform duration-200 transform hover:scale-105"
+                onClick={() => setSelectedArtwork(artwork)}
+              >
+                <img
+                  src={artwork.imageUrl}
+                  alt={artwork.title}
+                  className="w-full rounded-lg shadow-md object-cover"
+                />
+                <div className="mt-2">
+                  <p className="font-semibold text-gray-800">{artwork.title}</p>
+                  <p className="text-sm text-gray-600 italic">{artwork.artist}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Modal for selected artwork */}
           {selectedArtwork && (
