@@ -1,92 +1,110 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [aboutOpen, setAboutOpen] = useState(false);
   const [pastOpen, setPastOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // burger menu toggle
 
   return (
-    <nav className="w-full flex justify-end px-10 py-4 bg-deepRed space-x-8">
-      {/* About Us */}
-      <div className="relative">
-        <button
-          onClick={() => setAboutOpen(!aboutOpen)}
-          className="text-white bg-deepRed font-bold hover:underline flex items-center gap-1"
-        >
-          About Us
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7" />
-          </svg>
+    <nav className="w-full flex items-center justify-between px-6 py-4 bg-transparent">
+      {/* Logo */}
+      <img
+        src="/images/logos/logo_color_website.png"
+        alt="Logo"
+        className="h-12 w-auto"
+      />
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center space-x-10">
+        <button className="text-black bg-transparent hover:font-bold flex items-center gap-2">
+          ALL COLLECTIVES
         </button>
 
-        {aboutOpen && (
-          <div className="absolute top-full mt-2 w-52 bg-white border rounded">
-            <ul className="text-sm text-gray-700">
-              <li>
-                <Link to="/about/cujcs" onClick={() => setAboutOpen(false)} className="block px-4 py-2 hover:bg-deepRed">
-                  About CUJCS
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/leadership" onClick={() => setAboutOpen(false)} className="block px-4 py-2 hover:bg-deepRed">
-                  Leadership
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/policies" onClick={() => setAboutOpen(false)} className="block px-4 py-2 hover:bg-deepRed">
-                  CUJCS Policies
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/contact" onClick={() => setAboutOpen(false)} className="block px-4 py-2 hover:bg-deepRed">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
-      </div>
-
-      {/* Past Collectives */}
-      <div className="relative">
         <button
           onClick={() => setPastOpen(!pastOpen)}
-          className="text-white bg-deepRed font-bold hover:underline flex items-center gap-1"
+          className="text-black bg-transparent hover:font-bold flex items-center gap-2"
         >
-          Past Collectives
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7" />
-          </svg>
+          ABOUT
         </button>
 
-        {pastOpen && (
-          <div className="absolute top-full mt-2 w-52 bg-white border border-gray-200 rounded shadow z-50">
-            <ul className="text-sm text-gray-700">
-              <li>
-                <Link to="/past/journals" onClick={() => setPastOpen(false)} className="block px-4 py-2 hover:bg-deepRed">
-                  Past Journals
-                </Link>
-              </li>
-              <li>
-                <Link to="/past/art-collectives" onClick={() => setPastOpen(false)} className="block px-4 py-2 hover:bg-deepRed">
-                  Art Collectives
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
-      </div>
+        <button
+          onClick={() => setPastOpen(!pastOpen)}
+          className="text-black bg-transparent hover:font-bold flex items-center gap-2"
+        >
+          CONTACT
+        </button>
 
-      {/* Get Published */}
-      <div>
         <button
           onClick={() => window.open("https://link.com", "_blank")}
-          className="bg-pink hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
+          className="bg-[#A70039] hover:bg-[#56001D] text-white font-semibold py-3 px-6 rounded-full transition duration-200"
         >
-          Get Published! 
+          GET PUBLISHED
         </button>
       </div>
+
+      {/* Burger Menu Button (mobile) */}
+      <button
+        className="md:hidden flex items-center justify-center w-10 h-10 text-black hover:bg-gray-200 rounded"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+      >
+        {/* Burger icon */}
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {menuOpen ? (
+            // X icon when open
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          ) : (
+            // Hamburger icon when closed
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          )}
+        </svg>
+      </button>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden flex flex-col space-y-4 p-4 z-50">
+          <button className="text-black bg-transparent hover:font-bold flex items-center gap-2 text-left w-full">
+            ALL COLLECTIVES
+          </button>
+
+          <button
+            onClick={() => setPastOpen(!pastOpen)}
+            className="text-black bg-transparent hover:font-bold flex items-center gap-2 text-left w-full"
+          >
+            ABOUT
+          </button>
+
+          <button
+            onClick={() => setPastOpen(!pastOpen)}
+            className="text-black bg-transparent hover:font-bold flex items-center gap-2 text-left w-full"
+          >
+            CONTACT
+          </button>
+
+          <button
+            onClick={() => window.open("https://link.com", "_blank")}
+            className="bg-[#A70039] hover:bg-[#56001D] text-white font-semibold py-3 px-6 rounded-full transition duration-200 w-full"
+          >
+            GET PUBLISHED
+          </button>
+        </div>
+      )}
     </nav>
   );
 }
- 
