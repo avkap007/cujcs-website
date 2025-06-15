@@ -7,11 +7,14 @@ const config: Config = {
     extend: {
       colors: {
         brightOrange: '#F57C00', // not used in tokens, kept for utility
+        lightOrange: '#FEF2E9',
         lightPeach: '#FAC090',   // not used in tokens, kept for utility
         deepRed: '#A70039',
-        pink: '#F06292',          // not used in tokens, kept for utility
+        pink: '#F06292',         // not used in tokens, kept for utility
+        lightPink: '#FBD0DE',
         white: '#FFFFFF',
         mutedPurpleGray: '#D7C1C8', // not used in tokens, kept for utility
+        lightGray: '#F3ECEF',
         cardWhite: '#F8F6F6',
         pageWhite: '#F2F0F0',
         cardGrey: '#E9E6E6',
