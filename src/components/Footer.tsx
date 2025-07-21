@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import linkTreeLogo from '../assets/cujslogo.webp';
 
 // Social media icons
 const LinkedInIcon = () => (
@@ -15,7 +14,7 @@ const InstagramIcon = () => (
 );
 
 const LinkTreeIcon = () => (
-  <img src={linkTreeLogo} alt="LinkTree" className="w-8 h-8" />
+  <img src="/images/logos/logo_color_website.png" alt="LinkTree" className="w-8 h-8" />
 );
 
 const EmailIcon = () => (

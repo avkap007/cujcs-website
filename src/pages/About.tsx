@@ -1,5 +1,4 @@
 import HeadingBlock from "../components/HeadingBlock";
-import ParagraphBlock from "../components/ParagraphBlock";
 import BioBox from "../components/BioBox";
 
 export default function About() {
