@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 interface BioBoxProbs {
     name: string;
     position: string;

@@ -5,7 +5,6 @@ export default function About() {
   return (
     <>
     <BioBox
-      image="image"
       name="Name"
       position="Position"
       paragraph1="P1">
