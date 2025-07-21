@@ -40,12 +40,12 @@ export default function Footer() {
           </span>
         </div>
         <hr className="my-6 border-white opacity-50" />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+        <div className="flex flex-col space-y-8 text-sm md:grid md:grid-cols-4 md:space-y-0 md:gap-8">
           <div>
             <h3 className="text-xl font-bold mb-2">All Collectives</h3>
             <ul className="space-y-5">
-              <li><a href="#" className="text-white hover:underline">JOURNALS</a></li>
-              <li><a href="#" className="text-white hover:underline">ART</a></li>
+              <li><a href="/editions#journals" className="text-white hover:underline">JOURNALS</a></li>
+              <li><a href="/editions#art" className="text-white hover:underline">ART</a></li>
             </ul>
           </div>
           <div>
@@ -60,7 +60,7 @@ export default function Footer() {
           <div>
             <h3 className=" text-xl font-bold mb-2">About</h3>
             <ul className="space-y-5">
-              <li><a href="#" className="text-white hover:underline">ABOUT CUJCS</a></li>
+              <li><a href="/about" className="text-white hover:underline">ABOUT CUJCS</a></li>
               <li><a href="#" className="text-white hover:underline">LEADERSHIP</a></li>
               <li><a href="#" className="text-white hover:underline">CUJCS POLICIES</a></li>
             </ul>
@@ -78,48 +78,48 @@ export default function Footer() {
         <div className="mt-10">
           <hr className="my-6 border-white opacity-50" />
           <div className="text-center text-xs text-white"></div>
-          <div className="flex flex-col items-center md:items-start mt-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Connect with Us!</h2>
-            <div className="flex space-x-4 mb-6">
-              <a 
-                href="https://www.linkedin.com/company/cujcs-ca" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-brightOrange transition-colors"
-                aria-label="LinkedIn"
-              >
-                <LinkedInIcon />
-              </a>
-              <a 
-                href="https://www.instagram.com/cujcs.ca/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-brightOrange transition-colors"
-                aria-label="Instagram"
-              >
-                <InstagramIcon />
-              </a>
-              <a 
-                href="https://linktr.ee/cogsss" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-brightOrange transition-colors"
-                aria-label="LinkTree"
-              >
-                <LinkTreeIcon />
-              </a>
-              <a 
-                href="mailto:editorial@cujcs.ca" 
-                className="text-white hover:text-brightOrange transition-colors"
-                aria-label="Email"
-              >
-                <EmailIcon />
-              </a>
-            </div>
+        </div>
+        <div className="flex flex-col items-center md:items-start mt-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Connect with Us!</h2>
+          <div className="flex space-x-4 mb-6">
+            <a 
+              href="https://www.linkedin.com/company/cujcs-ca" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-brightOrange transition-colors"
+              aria-label="LinkedIn"
+            >
+              <LinkedInIcon />
+            </a>
+            <a 
+              href="https://www.instagram.com/cujcs.ca/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-brightOrange transition-colors"
+              aria-label="Instagram"
+            >
+              <InstagramIcon />
+            </a>
+            <a 
+              href="https://linktr.ee/cogsss" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-brightOrange transition-colors"
+              aria-label="LinkTree"
+            >
+              <LinkTreeIcon />
+            </a>
+            <a 
+              href="mailto:editorial@cujcs.ca" 
+              className="text-white hover:text-brightOrange transition-colors"
+              aria-label="Email"
+            >
+              <EmailIcon />
+            </a>
           </div>
-          <div className="text-center text-xs text-white mt-4">
-            Copyright  a9 2002-{new Date().getFullYear()} Canadian Undergraduate Journal of Cognitive Science All Rights Reserved
-          </div>
+        </div>
+        <div className="text-center text-xs text-white mt-4">
+          Copyright © 2002-{new Date().getFullYear()} Canadian Undergraduate Journal of Cognitive Science All Rights Reserved
         </div>
       </div>
     </footer>

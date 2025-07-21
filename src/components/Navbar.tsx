@@ -1,110 +1,85 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [pastOpen, setPastOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // burger menu toggle
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between px-6 py-4 bg-transparent">
-      {/* Logo */}
-      <img
-        src="/images/logos/logo_color_website.png"
-        alt="Logo"
-        className="h-12 w-auto"
-      />
-
-      {/* Desktop Menu */}
-      <div className="hidden md:flex items-center space-x-10">
-        <button className="text-black bg-transparent hover:font-bold flex items-center gap-2">
-          ALL COLLECTIVES
-        </button>
-
-        <button
-          onClick={() => setPastOpen(!pastOpen)}
-          className="text-black bg-transparent hover:font-bold flex items-center gap-2"
-        >
-          ABOUT
-        </button>
-
-        <button
-          onClick={() => setPastOpen(!pastOpen)}
-          className="text-black bg-transparent hover:font-bold flex items-center gap-2"
-        >
-          CONTACT
-        </button>
-
-        <button
-          onClick={() => window.open("https://link.com", "_blank")}
-          className="bg-[#A70039] hover:bg-[#56001D] text-white font-semibold py-3 px-6 rounded-full transition duration-200"
-        >
-          GET PUBLISHED
-        </button>
-      </div>
-
-      {/* Burger Menu Button (mobile) */}
-      <button
-        className="md:hidden flex items-center justify-center w-10 h-10 text-black hover:bg-gray-200 rounded"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-        aria-expanded={menuOpen}
-      >
-        {/* Burger icon */}
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {menuOpen ? (
-            // X icon when open
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          ) : (
-            // Hamburger icon when closed
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          )}
-        </svg>
-      </button>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden flex flex-col space-y-4 p-4 z-50">
-          <button className="text-black bg-transparent hover:font-bold flex items-center gap-2 text-left w-full">
-            ALL COLLECTIVES
-          </button>
-
-          <button
-            onClick={() => setPastOpen(!pastOpen)}
-            className="text-black bg-transparent hover:font-bold flex items-center gap-2 text-left w-full"
-          >
-            ABOUT
-          </button>
-
-          <button
-            onClick={() => setPastOpen(!pastOpen)}
-            className="text-black bg-transparent hover:font-bold flex items-center gap-2 text-left w-full"
-          >
-            CONTACT
-          </button>
-
+    <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 shadow-sm">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <img
+            src="/images/logos/logo_color_website.png"
+            alt="Logo"
+            className="h-12 w-auto"
+          />
+        </Link>
+        {/* Navigation and CTA */}
+        <div className="flex items-center space-x-3 md:order-2">
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center space-x-8 mr-4">
+            <Link to="/" className="text-black hover:font-bold">Home</Link>
+            <Link to="/editions" className="text-black hover:font-bold">All Collectives</Link>
+            <Link to="/about" className="text-black hover:font-bold">About</Link>
+            <Link to="/contact" className="text-black hover:font-bold">Contact</Link>
+          </div>
           <button
             onClick={() => window.open("https://link.com", "_blank")}
-            className="bg-[#A70039] hover:bg-[#56001D] text-white font-semibold py-3 px-6 rounded-full transition duration-200 w-full"
+            className="text-white bg-[#A70039] hover:bg-[#56001D] font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             GET PUBLISHED
           </button>
+          {/* Hamburger */}
+          <button
+            type="button"
+            className="inline-flex items-center p-0 w-10 h-10 justify-center text-sm md:hidden focus:outline-none"
+            aria-controls="navbar-menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{ background: 'none', boxShadow: 'none' }}
+          >
+            <span className="sr-only">Open main menu</span>
+            {menuOpen ? (
+              <svg className="w-7 h-7" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-7 h-7" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
-      )}
+        {/* Menu */}
+        <div
+          className={`items-center justify-between w-full md:hidden ${menuOpen ? "block" : "hidden"}`}
+          id="navbar-menu"
+        >
+          <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50">
+            <li>
+              <Link to="/" className="block py-2 px-3 text-black rounded hover:font-bold" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/editions" className="block py-2 px-3 text-black rounded hover:font-bold" onClick={() => setMenuOpen(false)}>
+                All Collectives
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="block py-2 px-3 text-black rounded hover:font-bold" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="block py-2 px-3 text-black rounded hover:font-bold" onClick={() => setMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 }

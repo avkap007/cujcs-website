@@ -132,7 +132,7 @@ const EditionsPage: React.FC = () => {
       {/* Main Content */}
       <div className="relative px-8 pb-12 max-w-7xl mx-auto">
         {/* Journals Section */}
-        <section className="mb-8">
+        <section className="mb-8" id="journals">
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <button
               onClick={() => toggleSection('journals')}
@@ -215,7 +215,7 @@ const EditionsPage: React.FC = () => {
         </section>
 
         {/* Art Section */}
-        <section className="relative">
+        <section className="relative" id="art">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Art</h2>
           <p className="text-gray-600 mb-8 max-w-4xl">
             Every issue of the journal features captivating art submitted by students. These works explore themes of cognition, consciousness, and the human mind through visual expression.

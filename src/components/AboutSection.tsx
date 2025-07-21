@@ -11,7 +11,7 @@ export default function AboutSection() {
                 Exploring the interdisciplinary field of cognitive science through undergraduate research.
             </h1>
         </div>
-        <div className="w-full md:w-full box-content rounded grid grid-cols-3 gap-5 py-5 text-left md:text-left">
+        <div className="w-full box-content rounded grid grid-cols-1 md:grid-cols-3 gap-5 py-5 text-left">
             <div className="bg-lightPink rounded px-8 py-10 gap-3">
                 <div className="box-content size-8 bg-deepRed rounded">
                 </div>
