@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import linkTreeLogo from '../assets/cujslogo.webp';
 
 // Social media icons
@@ -11,7 +10,7 @@ const LinkedInIcon = () => (
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
   </svg>
 );
 
@@ -27,98 +26,66 @@ const EmailIcon = () => (
 );
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError('Please enter a valid email address');
-      return;
-    }
-    
-    // If validation passes, let the form submit naturally to formsubmit.co
-    // No need to preventDefault() if validation passes
-    
-    // Show submitted state immediately (formsubmit.co will handle the redirect)
-    setSubmitted(true);
-    setError('');
-  };
-
   return (
-    <footer className="w-full font-ibm">
-      {/* Contact section */}
-      <div className="bg-lightPeach py-12">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
-          {/* Contact Us */}
-          <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-2xl md:text-3xl font-bold text-deepRed mb-6">Contact Us</h2>
-            {submitted ? (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4 w-full max-w-md">
-                Thank you for contacting us! We'll get back to you soon.
-              </div>
-            ) : (
-              <form 
-                onSubmit={handleSubmit} 
-                action="https://formsubmit.co/editorial@cujcs.ca" 
-                method="POST" 
-                className="w-full max-w-md"
-              >
-                <div className="mb-4">
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                      setError('');
-                    }}
-                    placeholder="Enter your email"
-                    className={`w-full p-3 rounded-md border ${error ? 'border-red-500' : 'border-gray-300'} bg-gray-100`}
-                    required
-                  />
-                  {error && <p className="mt-1 text-red-500 text-sm">{error}</p>}
-                </div>
-                <div className="mb-4">
-                  <textarea 
-                    name="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Your message"
-                    className="w-full p-3 rounded-md border border-gray-300 bg-gray-100 min-h-[100px]"
-                    required
-                  ></textarea>
-                </div>
-                
-                {/* Hidden inputs for formsubmit.co */}
-                <input type="hidden" name="_subject" value="New contact from CUJCS website" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value={window.location.href} />
-                
-                <button 
-                  type="submit"
-                  className="bg-brightOrange hover:bg-opacity-90 text-white py-2 px-6 rounded-md transition-colors"
-                >
-                  Send
-                </button>
-              </form>
-            )}
+    <footer className="w-full justify-start items-start bg-[#A70039] py-8 font-ibm text-white mt-10">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center gap-4 mb-6">
+          <img
+            src="/images/logos/logo_color_website.png"
+            alt="Logo"
+            className="h-12 w-auto"
+          />
+          <span className="text-white text-xl font-bold">
+            Canadian Undergraduate Journal of Cognitive Science
+          </span>
+        </div>
+        <hr className="my-6 border-white opacity-50" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <div>
+            <h3 className="text-xl font-bold mb-2">All Collectives</h3>
+            <ul className="space-y-5">
+              <li><a href="#" className="text-white hover:underline">JOURNALS</a></li>
+              <li><a href="#" className="text-white hover:underline">ART</a></li>
+            </ul>
           </div>
-
-          {/* Connect with Us */}
-          <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-2xl md:text-3xl font-bold text-deepRed mb-6">Connect with Us!</h2>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Get Published</h3>
+            <ul className="space-y-5">
+              <li><a href="#" className="text-white hover:underline">OVERVIEW</a></li>
+              <li><a href="#" className="text-white hover:underline">2025 THEMES</a></li>
+              <li><a href="#" className="text-white hover:underline">SUBMISSION CHECKLISTS</a></li>
+              <li><a href="#" className="text-white hover:underline">WHAT HAPPENS NEXT?</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className=" text-xl font-bold mb-2">About</h3>
+            <ul className="space-y-5">
+              <li><a href="#" className="text-white hover:underline">ABOUT CUJCS</a></li>
+              <li><a href="#" className="text-white hover:underline">LEADERSHIP</a></li>
+              <li><a href="#" className="text-white hover:underline">CUJCS POLICIES</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Connect</h3>
+            <ul className="space-y-5">
+              <li><a href="#" className="text-white hover:underline">CONTACT FORM</a></li>
+              <li><a href="#" className="text-white hover:underline">EDITORIAL EMAIL</a></li>
+              <li><a href="#" className="text-white hover:underline">LINKEDIN</a></li>
+              <li><a href="#" className="text-white hover:underline">INSTAGRAM</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-10">
+          <hr className="my-6 border-white opacity-50" />
+          <div className="text-center text-xs text-white"></div>
+          <div className="flex flex-col items-center md:items-start mt-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Connect with Us!</h2>
             <div className="flex space-x-4 mb-6">
               <a 
                 href="https://www.linkedin.com/company/cujcs-ca" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-deepRed hover:text-brightOrange transition-colors"
+                className="text-white hover:text-brightOrange transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon />
@@ -127,7 +94,7 @@ export default function Footer() {
                 href="https://www.instagram.com/cujcs.ca/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-deepRed hover:text-brightOrange transition-colors"
+                className="text-white hover:text-brightOrange transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramIcon />
@@ -136,31 +103,23 @@ export default function Footer() {
                 href="https://linktr.ee/cogsss" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-deepRed hover:text-brightOrange transition-colors"
+                className="text-white hover:text-brightOrange transition-colors"
                 aria-label="LinkTree"
               >
                 <LinkTreeIcon />
               </a>
               <a 
                 href="mailto:editorial@cujcs.ca" 
-                className="text-deepRed hover:text-brightOrange transition-colors"
+                className="text-white hover:text-brightOrange transition-colors"
                 aria-label="Email"
               >
                 <EmailIcon />
               </a>
             </div>
-            {/* <p className="text-deepRed text-center md:text-left">
-              Follow us for updates on upcoming editions, <br />
-              submission opportunities, and more!
-            </p> */}
           </div>
-        </div>
-      </div>
-
-      {/* Copyright */}
-      <div className="bg-lightPeach py-4 border-t border-deepRed border-opacity-10">
-        <div className="max-w-7xl mx-auto px-4 text-center text-sm text-deepRed">
-          Copyright © 2002-{new Date().getFullYear()} Canadian Undergraduate Journal of Cognitive Science All Rights Reserved
+          <div className="text-center text-xs text-white mt-4">
+            Copyright  a9 2002-{new Date().getFullYear()} Canadian Undergraduate Journal of Cognitive Science All Rights Reserved
+          </div>
         </div>
       </div>
     </footer>
