@@ -36,7 +36,9 @@ const config: Config = {
         h2: ['32px', { lineHeight: '140%' }],
         h3: ['24px', { lineHeight: '140%' }],
         h4: ['18px', { lineHeight: '100%' }],
-        body: ['14px', { lineHeight: '160%' }]
+        body: ['14px', { lineHeight: '160%' }],
+        link: ['14px', { lineHeight: '150%' }],
+        caption: ['12px', { lineHeight: '140%' }],
       }
     }
   },

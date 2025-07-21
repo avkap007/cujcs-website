@@ -41,14 +41,14 @@ export default function Footer() {
         <hr className="my-6 border-white opacity-50" />
         <div className="flex flex-col space-y-8 text-sm md:grid md:grid-cols-4 md:space-y-0 md:gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-2">All Collectives</h3>
+            <h3 className="mb-2">All Collectives</h3>
             <ul className="space-y-5">
               <li><a href="/editions#journals" className="text-white hover:underline">JOURNALS</a></li>
               <li><a href="/editions#art" className="text-white hover:underline">ART</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-2">Get Published</h3>
+            <h3 className="mb-2">Get Published</h3>
             <ul className="space-y-5">
               <li><a href="#" className="text-white hover:underline">OVERVIEW</a></li>
               <li><a href="#" className="text-white hover:underline">2025 THEMES</a></li>
@@ -57,7 +57,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className=" text-xl font-bold mb-2">About</h3>
+            <h3 className="mb-2">About</h3>
             <ul className="space-y-5">
               <li><a href="/about" className="text-white hover:underline">ABOUT CUJCS</a></li>
               <li><a href="#" className="text-white hover:underline">LEADERSHIP</a></li>
@@ -65,7 +65,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-2">Connect</h3>
+            <h3 className="mb-2">Connect</h3>
             <ul className="space-y-5">
               <li><a href="#" className="text-white hover:underline">CONTACT FORM</a></li>
               <li><a href="#" className="text-white hover:underline">EDITORIAL EMAIL</a></li>
@@ -79,7 +79,7 @@ export default function Footer() {
           <div className="text-center text-xs text-white"></div>
         </div>
         <div className="flex flex-col items-center md:items-start mt-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Connect with Us!</h2>
+          <h2 className="mb-6">Connect with Us!</h2>
           <div className="flex space-x-4 mb-6">
             <a 
               href="https://www.linkedin.com/company/cujcs-ca" 

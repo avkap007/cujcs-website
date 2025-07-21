@@ -118,7 +118,7 @@ const EditionsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Orange Background Shape */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-orange-200 via-orange-300 to-orange-400 rounded-full blur-3xl opacity-40 transform translate-x-1/3 -translate-y-1/3" />
       

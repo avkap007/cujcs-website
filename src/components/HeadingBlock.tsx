@@ -14,16 +14,15 @@ export default function HeadingBlock({title, paragraph} : HeadingBlockProps) {
                     {title}
                 </h2>
                 <div className="h-10"></div>
-                <div className="pl-9">
+                <p className="pl-9">
                     {paragraph}
-                </div>
+                </p>
             </div>
             <div>
                 <img className="w-[165px] h-[107px] md:h-[112px] lg:h-[112px] md:w-[139px] lg:w-[139px]" src="{image}">
                 </img>
             </div>
-            
-        </div>   
+        </div>
     </div>
   );
 }
