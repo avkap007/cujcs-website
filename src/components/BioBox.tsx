@@ -15,6 +15,7 @@ export default function BioBox({name, position, paragraph1, image = "/images/sto
                     className="w-full h-full object-cover" 
                     src={image} 
                     alt={`${name} - ${position}`}
+                    onError={(e) => { e.currentTarget.src = "/images/stockimages/ouraim.png"; }}
                 />
             </div>
         </div>
