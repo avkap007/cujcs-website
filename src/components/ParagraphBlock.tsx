@@ -1,17 +1,14 @@
-interface HeadingBlockProps {
+interface ParagraphBlockProps {
     paragraph: string;
+    className?: string;
 }
 
-export default function ParagraphBlock({paragraph} : HeadingBlockProps) {
+export default function ParagraphBlock({paragraph, className = ""} : ParagraphBlockProps) {
   return (
-    <div className="h-60 p-9">
-        <div className="py-5">
-            <div className="h-10"></div>
-            <div className="w-70 pl-9">
-                {paragraph}
-            </div>
-        </div>   
+    <div className={`bg-[#F2F0F0] rounded-lg p-8 md:p-12 ${className}`}>
+        <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+            {paragraph}
+        </p>
     </div>
-
   );
 }

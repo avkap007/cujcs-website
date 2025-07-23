@@ -1,23 +1,31 @@
-interface BioBoxProbs {
+interface BioBoxProps {
     name: string;
     position: string;
     paragraph1: string;
+    image?: string;
 }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-export default function BioBoxProbs({name, position, paragraph1} : BioBoxProbs) {
+export default function BioBox({name, position, paragraph1, image = "/images/stockimages/ouraim.png"} : BioBoxProps) {
   return (
-    <div className="bg-cardGrey w-[201px] h-[274px] md:h-[158px] lg:h-[158px] md:w-[621px] lg:w-[621px] flex items-center justify-center md:justify-start md:pl-10 lg:justify-start lg:pl-10"> 
-        <div className="bg-cardGrey w-[165px] h-[226px] md:h-[112px] lg:h-[112px] md:w-[139px] lg:w-[139px] md:grid md:grid-flow-col md:grid-rows-3 md:gap-4 lg:grid lg:grid-flow-col lg:grid-rows-3 lg:gap-4">
-            <div className="bg-cardDarkGrey w-[165px] h-[107px] md:h-[112px] lg:h-[112px] md:w-[139px] lg:w-[139px] md:row-span-3 lg:row-span-3">
-                <img className="w-[165px] h-[107px] md:h-[112px] lg:h-[112px] md:w-[139px] lg:w-[139px]" src="{image}" />
+    <div className="bg-[#F2F0F0] rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+        {/* Image Container */}
+        <div className="w-full md:w-32 lg:w-32 flex-shrink-0">
+            <div className="bg-gray-300 w-full h-32 md:h-32 lg:h-32 rounded-lg overflow-hidden">
+                <img 
+                    className="w-full h-full object-cover" 
+                    src={image} 
+                    alt={`${name} - ${position}`}
+                />
             </div>
-            <div className="md:col-span-2 lg:col-span-2">
-                <h4 className="pb-1">{name}</h4>
-                <h5 className="pt-1 pb-3">{position}</h5>
+        </div>
+        
+        {/* Content Container */}
+        <div className="flex-1 min-w-0">
+            <div className="mb-4">
+                <h4 className="font-mori font-bold text-lg md:text-xl text-gray-900 mb-1">{name}</h4>
+                <h5 className="font-ibm font-normal text-sm md:text-base text-gray-600 uppercase tracking-wider">{position}</h5>
             </div>
-            <p className="pt-4 md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2">{paragraph1}</p>
+            <p className="text-gray-700 leading-relaxed">{paragraph1}</p>
         </div>
     </div>
   );

@@ -1,0 +1,30 @@
+{
+  "team": [
+    {
+      "name": "MARK GILES",
+      "position": "EDITOR-IN-CHIEF",
+      "image": "/images/stockimages/ouraim.png",
+      "bio": "Research in Virtual Reality, Mind Palace, Philosophy radio show, metaphysics, president of Cognitive Science Student Society, Philosophy Student Union, phenomenology, theories of perception, data mining, machine learning, reading Philosophy, and playing guitar."
+    },
+    {
+      "name": "HILARY J. TSUI",
+      "position": "EDITOR-IN-CHIEF",
+      "image": "/images/stockimages/ouraim.png",
+      "bio": "Volunteering as a research assistant at Nicholls Lab (UBC Psychiatry) and FHL Clinics, research on offenders, risk factors, social skills, autism, sound therapy, mental disorder, crime (NCRMD), language acquisition, dissociative identity disorder, twin studies, cross-cultural psychology, reading/writing fiction, learning new languages (Cyrillic alphabet), sushi, piano, singing, executive member and clarinetist for SFU Jazz Band, and playing ukulele."
+    },
+    {
+      "name": "GURMEHAR SINGH",
+      "position": "EDITORIAL ASSISTANT",
+      "image": "/images/stockimages/ouraim.png",
+      "bio": "Interest in researching humans, having many hobbies, and currently reading a book on meditation."
+    }
+  ],
+  "about": {
+    "description": "The Canadian Undergraduate Journal of Cognitive Science (CUJCS) is an electronic and print journal published by the Cognitive Science Student Society (CS³) at Simon Fraser University.",
+    "aim": "Our aim is to provide a forum for students to share work among peers and gain valuable experience in the process of getting an academic paper published. As a publication, CUJCS provides a unique reference for students, showcases research by undergraduate students, improves the contact and exchange of ideas between Canadian students and cognitive scientists alike, and illustrates the interdisciplinary work that is the hallmark of cognitive science. Although preference is given to Canadian students, contributions from students elsewhere are strongly encouraged."
+  },
+  "header": {
+    "image": "/images/stockimages/ouraim.png",
+    "title": "ABOUT"
+  }
+}
