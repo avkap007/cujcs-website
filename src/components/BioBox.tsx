@@ -5,7 +5,7 @@ interface BioBoxProps {
     image?: string;
 }
 
-export default function BioBox({name, position, paragraph1, image = "/images/stockimages/ouraim.png"} : BioBoxProps) {
+export default function BioBox({name, position, paragraph1, image = DEFAULT_IMAGE_PATH} : BioBoxProps) {
   return (
     <div className="bg-[#F2F0F0] rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
         {/* Image Container */}
