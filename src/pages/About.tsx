@@ -66,7 +66,7 @@ export default function About() {
           <div className="space-y-8">
             {teamData.team.map((member, index) => (
               <BioBox
-                key={member.id || index}
+                key={index}
                 name={member.name}
                 position={member.position}
                 paragraph1={member.bio}

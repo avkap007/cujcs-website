@@ -1,3 +1,5 @@
+const DEFAULT_IMAGE_PATH = "/images/stockimages/ouraim.png";
+
 interface BioBoxProps {
     name: string;
     position: string;
