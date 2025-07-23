@@ -64,9 +64,9 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-mori font-bold mb-12 text-left">Meet our Team</h2>
           
           <div className="space-y-8">
-            {teamData.team.map((member, index) => (
+            {teamData.team.map((member) => (
               <BioBox
-                key={index}
+                key={member.name}
                 name={member.name}
                 position={member.position}
                 paragraph1={member.bio}
