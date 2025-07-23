@@ -1,4 +1,3 @@
-import React from "react";
 import BioBox from "../components/BioBox";
 import ParagraphBlock from "../components/ParagraphBlock";
 import teamData from "../data/team.json";
