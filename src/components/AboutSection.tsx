@@ -7,7 +7,7 @@ export default function AboutSection() {
       </div>
       <div className="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto mt-[84px]">
         {/* Card 1 */}
-        <div className="bg-white rounded-lg shadow px-[36px] py-[48px] flex flex-col items-start min-w-0 flex-1 min-h-[320px]">
+        <div className="bg-white rounded-lg px-[36px] py-[48px] flex flex-col items-start min-w-0 flex-1 min-h-[320px]">
           <h4 className="uppercase font-ibm font-normal mb-[38px]">Who Are We?</h4>
           <img src="/images/stockimages/whoarewe.png" alt="Who Are We" className="w-full h-24 object-cover rounded mb-[38px]" />
           <p>
@@ -15,7 +15,7 @@ export default function AboutSection() {
           </p>
         </div>
         {/* Card 2 */}
-        <div className="bg-white rounded-lg shadow px-[36px] py-[48px] flex flex-col items-start min-w-0 flex-1 min-h-[320px]">
+        <div className="bg-white rounded-lg px-[36px] py-[48px] flex flex-col items-start min-w-0 flex-1 min-h-[320px]">
           <h4 className="uppercase font-ibm font-normal mb-[38px]">Our Aim</h4>
           <img src="/images/stockimages/ouraim.png" alt="Our Aim" className="w-full h-24 object-cover rounded mb-[38px]" />
           <p>
@@ -23,7 +23,7 @@ export default function AboutSection() {
           </p>
         </div>
         {/* Card 3 */}
-        <div className="bg-white rounded-lg shadow px-[36px] py-[48px] flex flex-col items-start min-w-0 flex-1 min-h-[320px]">
+        <div className="bg-white rounded-lg px-[36px] py-[48px] flex flex-col items-start min-w-0 flex-1 min-h-[320px]">
           <h4 className="uppercase font-ibm font-normal mb-[38px]">Our Process</h4>
           <img src="/images/stockimages/ourprocess.png" alt="Our Process" className="w-full h-24 object-cover rounded mb-[38px]" />
           <p>
