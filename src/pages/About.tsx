@@ -11,8 +11,8 @@ export default function About() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url("${teamData.header.image}")`,
-            width: '867px',
-            height: '416px',
+            width: '100%',
+            height: '100%',
             flexShrink: 0,
           }}
         />
