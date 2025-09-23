@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 
 // Artwork imports
-import cujs from '../assets/artwork/cujs.jpg';
-import cujs_2 from '../assets/artwork/cujs_2.jpg';
-import cujs_3 from '../assets/artwork/cujs_3.jpg';
-import cujs_4 from '../assets/artwork/cujs_4.jpg';
-import cujs_5 from '../assets/artwork/cujs_5.jpg';
-import cujs_56 from '../assets/artwork/cujs_56jpg.jpg';
-import cujs_6 from '../assets/artwork/cujs_6jpg.jpg';
+import cujs from '../assets/artwork/cujcs.png';
+import cujs_2 from '../assets/artwork/cujcs_2.png';
+import cujs_3 from '../assets/artwork/cujcs_3.png';
+import cujs_4 from '../assets/artwork/cujcs_4.png';
+import cujs_5 from '../assets/artwork/cujcs_5.png';
+import cujs_56 from '../assets/artwork/cujcs_6.png';
+import cujs_6 from '../assets/artwork/cujcs_7.png';
 
 // Cover imports
 import cover2023 from '../assets/covers/CUJCS2023_cover.png';
 import cover2020 from '../assets/covers/CUJCS2020_cover.png';
-import cover2019 from '../assets/covers/CUJCS2013_cover.jpg';
 import cover2013 from '../assets/covers/CUJCS2013_cover.jpg';
 import cover2008 from '../assets/covers/CUJCS2008_cover.jpg';
 import cover2004 from '../assets/covers/CUJCS2004_cover.png';
