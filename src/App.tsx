@@ -22,6 +22,7 @@ import Submissions from "./pages/Submissions";
 import Editions from "./pages/Editions";
 import Art from "./pages/Art";
 import Contact from "./pages/Contact";
+import GetPublished from "./pages/GetPublished.tsx"; 
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/editions" element={<Editions />} />
           <Route path="/art" element={<Art />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/get-published" element={<GetPublished />} />
         </Routes>
       </Layout>
     </Router>

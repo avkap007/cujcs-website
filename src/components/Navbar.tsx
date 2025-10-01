@@ -24,12 +24,12 @@ export default function Navbar() {
             <Link to="/about" className="text-black hover:font-bold">About</Link>
             <Link to="/contact" className="text-black hover:font-bold">Contact</Link>
           </div>
-          <button
-            onClick={() => window.open("https://link.com", "_blank")}
-            className="text-white bg-[#A70039] hover:bg-[#56001D] font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-            GET PUBLISHED
-          </button>
+          <Link
+  to="/get-published"
+  className="text-white bg-[#A70039] hover:bg-[#56001D] font-medium rounded-lg text-sm px-4 py-2 text-center inline-block"
+>
+  GET PUBLISHED
+</Link>
           {/* Hamburger */}
           <button
             type="button"
